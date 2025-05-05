@@ -39,7 +39,7 @@ The definition file format supports the concept of left and right layer keys.
 2. Translate the definition file to JSON and copy to clipboard:
 
 ```bash
-python3 builder.py sample.def | pbcopy
+python3 builder.py <definition-file> | pbcopy
 ```
 
 3. Create a rule in `Complex Modifications`, and paste the JSON from your clipboard into it.
