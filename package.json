@@ -1,0 +1,12 @@
+{
+  "name": "complex-mod-rule-generator",
+  "version": "0.0.1",
+  "description": "Generates a Karabiner-Elements complex modification rule JSON from a simple definition file",
+  "main": "builder.js",
+  "scripts": {
+    "run": "echo \"not implemented\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "type": "module"
+}
