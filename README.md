@@ -1,7 +1,7 @@
-# complex-mod-rule-generator
-Generates a [Karabiner-Elements](https://karabiner-elements.pqrs.org/) complex modification rule JSON from a simpler definition file.
+# karabiner-layered-mapper
+Generates a [Karabiner-Elements](https://karabiner-elements.pqrs.org/) complex modification rule JSON from a rule definition file.
 
-The definition file format supports the concept of left and right layer keys.
+The definition file format supports virtual layer keys and shift keys, enabling layer-based key mapping commonly used in custom keyboards.
 
 # Usage
 1. Create a definition file based on the included sample.def (shown below):
