@@ -50,7 +50,7 @@ The definition file format supports virtual layer keys and shift keys, enabling 
 
    The special aliases `LL`, `LR`, `SL` and `SR` represent `sp_layer_left` and `sp_layer_right`, `sp_left_shift` and `sp_right_shift` respectively — these are not native to [Karabiner-Elements](https://karabiner-elements.pqrs.org/), but are logical modifier keys emulated using the event system of [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
 
-   All other key and modifier names in the definition file must match the internal names used by Karabiner-Elements. You can find the correct names by pressing keys in Karabiner-EventViewer, which displays the identifiers to use in your definition file.
+   All other key and modifier names in the definition file must match the internal names used by `Karabiner-Elements`. You can find the correct names by pressing keys in Karabiner-EventViewer, which displays the identifiers to use in your definition file.
 
 2. Translate the definition file to JSON and copy to clipboard:
 
