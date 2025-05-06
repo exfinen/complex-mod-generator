@@ -40,7 +40,6 @@ LL + j: left_shift + 7 # &
 LL + k: left_shift + 8 # *
 LL + l: left_shift + 9 # (
 LL + semicolon: left_shift + 0 # )
-#LL + quote: left_shift + quote 
 
 LL + n: left_shift + hyphen # _
 LL + m: equal_sign # =
