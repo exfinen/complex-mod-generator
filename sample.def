@@ -2,39 +2,57 @@
 description: Sample mapping
 s_layer_left: japanese_eisuu
 s_layer_right: japanese_kana
-s_left_shift: a
-s_right_shift: semicolon
+#s_left_shift: left_coqntrol
+#s_right_shift: semicolon
 
 # Layer 1
 left_control + h: delete_or_backspace
 left_control + m: return_or_enter
 
 # Layer 2
+## Left
 LR + q: 1
 LR + w: 2
 LR + e: 3
 LR + r: 4
 LR + t: 5
 
-LR + SR + q: left_shift + 1 # !
-LR + SR + w: left_shift + 2 # @
-LR + SR + e: left_shift + 3 # #
-LR + SR + r: left_shift + 4 # $
-LR + SR + t: left_shift + 5 # %
+LR + a: left_shift + 1 # !
+LR + s: left_shift + 2 # @
+LR + d: left_shift + 3 # #
+LR + f: left_shift + 4 # $
+LR + g: left_shift + 5 # %
 
+LR + z: backslash
+LR + x: open_bracket
+LR + c: close_bracket
+LR + v: hyphen
+LR + b: equal_sign
+
+## Right
 LL + y: 6
 LL + u: 7
 LL + i: 8
 LL + o: 9
 LL + p: 0
+LL + close_bracket: grave_accent_and_tilde
 
-LL + SL + y: left_shift + 6 # ^
-LL + SL + u: left_shift + 7 # &
-LL + SL + i: left_shift + 8 # *
-LL + SL + o: left_shift + 9 # (
-LL + SL + p: left_shift + 0 # )
+LL + h: left_shift + 6 # ^ 
+LL + j: left_shift + 7 # &
+LL + k: left_shift + 8 # *
+LL + l: left_shift + 9 # (
+LL + semicolon: left_shift + 0 # )
+#LL + quote: left_shift + quote 
+
+LL + n: left_shift + hyphen # _
+LL + m: equal_sign # =
+LL + comma: left_shift + open_bracket # {
+LL + period: left_shift + close_bracket # }
+LL + slash: left_shift + backslash # |
+#LL + backslash: 
 
 # Layer 3
-LL + LR + j: grave_accent_and_tilde 
+LL + LR + h: grave_accent_and_tilde 
+LL + LR + j: left_shift + grave_accent_and_tilde 
 LL + LR + k: backslash 
 

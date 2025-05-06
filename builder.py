@@ -148,6 +148,8 @@ def translate_key_defs(ms: list[object], lines) -> object:
 
     # rhs
     rhs = [x.strip() for x in line[1].split("+")]
+    if len(rhs) == 0:
+      continue
     to_key = rhs[-1]
     to_mods = [x for x in rhs[:-1]]
 
@@ -179,6 +181,8 @@ obj = {
   "manipulators": [],
 }
 obj, ms = translate_base_settings(obj, lines)
+if not "description" in obj:
+  raise ValueError("description is required")
 
 obj["manipurators"] = translate_key_defs(obj["manipulators"], ms)
 
