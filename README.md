@@ -13,7 +13,7 @@ The definition file consists of:
 
 ### Line format
 
-- Lines may include comments using #. A # can appear anywhere, including at the beginning of the line. Everything after it is ignored.
+- Lines may include comments using `#`. A `#` can appear anywhere, including at the beginning of the line. Everything after it is ignored.
 - Whitespace is insignificant and can be added for readability.
 - Karabiner key and modifier IDs must match the internal names used by Karabiner-Elements. You can find the correct names by pressing keys in Karabiner-EventViewer, which shows the exact identifiers to use.
 
