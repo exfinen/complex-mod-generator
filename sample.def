@@ -2,8 +2,6 @@
 description: Sample mapping
 s_layer_left: japanese_eisuu
 s_layer_right: japanese_kana
-#s_left_shift: left_coqntrol
-#s_right_shift: semicolon
 
 # Layer 1
 left_control + h: delete_or_backspace
@@ -49,7 +47,6 @@ LL + m: equal_sign # =
 LL + comma: left_shift + open_bracket # {
 LL + period: left_shift + close_bracket # }
 LL + slash: left_shift + backslash # |
-#LL + backslash: 
 
 # Layer 3
 LL + LR + h: grave_accent_and_tilde 
