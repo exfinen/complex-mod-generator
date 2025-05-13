@@ -37,8 +37,6 @@ The following special modifier IDs are available:
 |----------------|----|------------|
 | sp_layer_left  | LL | Left Layer |
 | sp_layer_right | LR | Right Layer |
-| sp_left_shift  | SL | Left Shift |
-| sp_right_shift | SR | Right Shift |
 
 Each special modifier ID can optionally be mapped to a Karabiner key ID using the following format:
 

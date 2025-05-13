@@ -44,3 +44,15 @@ class MappingRule():
 
     return obj
 
+  def __eq__(self, other):
+    if not isinstance(other, MappingRule):
+      return NotImplemented
+    return (
+      self.line_no == other.line_no and
+      self.lhs == other.lhs and
+      self.rhs == other.rhs
+    )
+
+  def __hash__(self):
+    return hash((self.line_no, self.lhs, self.rhs))
+

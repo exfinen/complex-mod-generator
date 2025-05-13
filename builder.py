@@ -5,6 +5,7 @@ from json_obj import JsonObj
 from line_parser import LineParser
 from macro import expand
 from mapping_rule import MappingRule
+from util import remove_duplicates
 
 def parse_args():
   parser = argparse.ArgumentParser(description="Karabiner layered mapper")
@@ -39,7 +40,7 @@ with open(args.file, 'r', encoding='utf-8') as f:
         mapping_rules.append(mr)
 
 base_settings.validate()
-#mapping_rules = remove_dups(mapping_rules)
+mapping_rules = remove_duplicates(mapping_rules)
 
 json_obj = JsonObj(base_settings, mapping_rules)
 

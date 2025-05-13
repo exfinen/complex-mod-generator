@@ -4,18 +4,14 @@ from typing import Dict
 
 S_LAYER_LEFT = "s_layer_left"
 S_LAYER_RIGHT = "s_layer_right"
-S_LEFT_SHIFT = "s_left_shift"
-S_RIGHT_SHIFT = "s_right_shift"
 
-SP_MOD_ABBRS = ["LL", "LR", "SL", "SR"]
+SP_MOD_ABBRS = ["LL", "LR"]
 
 class BaseSettings():
   def __init__(self):
     self.description = None
     self.LL = None
     self.LR = None
-    self.SL = None
-    self.SR = None
 
   def try_consume(self, line_no: int, lhs: ParseResult, rhs: ParseResult) -> bool:
     """Returns True if the line is consumed, False otherwise."""
@@ -23,21 +19,19 @@ class BaseSettings():
       self.description = rhs.key
       return True
     elif lhs.key.startswith("s_"):
-      # SpecialModifiers shouldn't have modifiers on the rhs
-      if not rhs.is_key_only():
-        raise ValueError(f"Special modifier mapped to modifier keys at {line_no}")
+      # lhs and rhs should not contain modifiers
+      if not lhs.is_key_only() or not rhs.is_key_only():
+        raise ValueError(f"Special modifier def contains modifier keys at {line_no}")
 
       if lhs.key == S_LAYER_LEFT:
+        if self.LL is not None:
+          raise ValueError(f"Duplicate def for {lhs.key} at {line_no}")
         self.LL = SpecialModifier(rhs.key, lhs.key, "LL")
 
       elif lhs.key == S_LAYER_RIGHT:
+        if self.LR is not None:
+          raise ValueError(f"Duplicate def for {lhs.key} at {line_no}")
         self.LR = SpecialModifier(rhs.key, lhs.key, "LR")
-
-      elif lhs.key == S_LEFT_SHIFT:
-        self.SL = SpecialModifier(rhs.key, lhs.key, "SL")
-
-      elif lhs.key == S_RIGHT_SHIFT:
-        self.SR = SpecialModifier(rhs.key, lhs.key, "SR")
 
       else:
         raise ValueError(f"Unknown special modifier key: {lhs.key} at {line_no}")
@@ -52,12 +46,6 @@ class BaseSettings():
 
     if self.LR is not None:
       xs.append(self.LR)
-
-    if self.SL is not None:
-      xs.append(self.SL)
-
-    if self.SR is not None:
-      xs.append(self.SR)
 
     return xs
       
