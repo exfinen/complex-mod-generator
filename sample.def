@@ -9,90 +9,49 @@ left_control + m: return_or_enter
 right_command: escape
 
 # Layer 2
-## Left
-### Row 1
-LR + q: 1
-LR + w: 2
-LR + e: 3
-LR + r: 4
-LR + t: 5
+## Row 1
+LL,LR + q: 1
+LL,LR + w: 2
+LL,LR + e: 3
+LL,LR + r: 4
+LL,LR + t: 5
 
-LR + y: 6
-LR + u: 7
-LR + i: 8
-LR + o: 9
-LR + p: 0
-LR + close_bracket: grave_accent_and_tilde
+LL,LR + y: 6
+LL,LR + u: 7
+LL,LR + i: 8
+LL,LR + o: 9
+LL,LR + p: 0
+LL,LR + close_bracket: grave_accent_and_tilde
 
-### Row 2
-LR + a: left_shift + 1 # !
-LR + s: left_shift + 2 # @
-LR + d: left_shift + 3 # #
-LR + f: left_shift + 4 # $
-LR + g: left_shift + 5 # %
+## Row 2
+LL,LR + a: left_shift + 1 # !
+LL,LR + s: left_shift + 2 # @
+LL,LR + d: left_shift + 3 # #
+LL,LR + f: left_shift + 4 # $
+LL,LR + g: left_shift + 5 # %
 
-LR + h: left_shift + 6 # ^ 
-LR + j: left_shift + 7 # &
-LR + k: left_shift + 8 # *
-LR + l: left_shift + 9 # (
-LR + semicolon: left_shift + 0 # )
+LL,LR + h: left_shift + 6 # ^ 
+LL,LR + j: left_shift + 7 # &
+LL,LR + k: left_shift + 8 # *
+LL,LR + l: left_shift + 9 # (
+LL,LR + semicolon: left_shift + 0 # )
 
-### Row 3
-LR + z: backslash
-LR + x: open_bracket
-LR + c: close_bracket
-LR + v: hyphen
-LR + b: equal_sign
+## Row 3
+LL,LR + z: backslash
+LL,LR + x: open_bracket
+LL,LR + c: close_bracket
+LL,LR + v: hyphen
+LL,LR + b: left_shift + equal_sign # !
 
-LR + n: left_shift + hyphen # _
-LR + m: equal_sign # =
-LR + comma: left_shift + open_bracket # {
-LR + period: left_shift + close_bracket # }
-LR + slash: left_shift + backslash # |
-
-## Right
-### Row 1
-LL + q: 1
-LL + w: 2
-LL + e: 3
-LL + r: 4
-LL + t: 5
-
-LL + y: 6
-LL + u: 7
-LL + i: 8
-LL + o: 9
-LL + p: 0
-LL + close_bracket: grave_accent_and_tilde
-
-### Row 2
-LL + a: left_shift + 1 # !
-LL + s: left_shift + 2 # @
-LL + d: left_shift + 3 # #
-LL + f: left_shift + 4 # $
-LL + g: left_shift + 5 # %
-
-LL + h: left_shift + 6 # ^ 
-LL + j: left_shift + 7 # &
-LL + k: left_shift + 8 # *
-LL + l: left_shift + 9 # (
-LL + semicolon: left_shift + 0 # )
-
-### Row 3
-LL + z: backslash
-LL + x: open_bracket
-LL + c: close_bracket
-LL + v: hyphen
-LL + b: equal_sign
-
-LL + n: left_shift + hyphen # _
-LL + m: equal_sign # =
-LL + comma: left_shift + open_bracket # {
-LL + period: left_shift + close_bracket # }
-LL + slash: left_shift + backslash # |
+LL,LR + n: left_shift + hyphen # _
+LL,LR + m: equal_sign # =
+LL,LR + comma: left_shift + open_bracket # {
+LL,LR + period: left_shift + close_bracket # }
+LL,LR + slash: left_shift + backslash # |
 
 # Layer 3
 LL + LR + h: grave_accent_and_tilde 
 LL + LR + j: left_shift + grave_accent_and_tilde 
 LL + LR + k: backslash 
+LL + LR + l: tab 
 

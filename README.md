@@ -62,6 +62,24 @@ The format is:
 
 `<To>` is zero or more Karabiner modifier IDs followed by one Karabiner key ID.
 
+#### Macros
+The first element in the `<from>` section can be an `aggregated special modifier ID` (a comma-separated list). When that first element is comma-separated, the line will expand into one rule per listed modifier.
+
+For example, the following mapping rule:
+
+``` 
+LL,LR + b: left_shift + equal_sign
+```
+
+will be expanded to:
+
+```
+LL + b: left_shift + equal_sign
+LR + b: left_shift + equal_sign
+```
+
+Note that this expansion applies only to the first element in the `<from>` section.
+
 ## Usage
 1. Create a definition file
 
