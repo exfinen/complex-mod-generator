@@ -15,9 +15,6 @@ class JsonObj:
       "manipulators": [sp_mod.to_obj() for sp_mod in sp_mods] + rule_objs,
     }
 
-  def __str__(self) -> str: 
-    return "not implemented"
-
   def get(self) -> object:
     return self.obj
 
