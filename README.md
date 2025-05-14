@@ -46,7 +46,7 @@ Each special modifier ID can optionally be mapped to a Karabiner key ID using th
 
 You may define only the ones you use. It’s perfectly fine to omit unused special modifier IDs.
 
-⚠️  Aliases (LL, LR, etc.) cannot be used on the left-hand side of these mappings.
+⚠️  Aliases cannot be used on the left-hand side of these mappings.
 
 #### Key mapping lines
 
