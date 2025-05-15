@@ -1,4 +1,4 @@
-from base_settings import BaseSettings
+from base_settings import BaseSettings, ALL_SP_MOD_ABBRS
 from parse_result import ParseResult
 
 class MappingRule():
@@ -30,16 +30,15 @@ class MappingRule():
 
     if len(self.lhs.sp_mods) > 0:
       # get SpecialModifier objects from names
-      m = base_settings.get_sp_mod_name_to_sp_mod_mapper()
-      sp_mods = [m[x] for x in self.lhs.sp_mods]
+      abbr_to_sp_mod = base_settings.get_sp_mod_name_to_obj_mapper()
 
       obj["conditions"] = [
         {
-          "name": sp_mod.get_event_name(),
+          "name": abbr_to_sp_mod[abbr].get_event_name(),
           "type": "variable_if",
-          "value": int(sp_mod.name in self.lhs.sp_mods),
+          "value": int(abbr_to_sp_mod[abbr].name in self.lhs.sp_mods),
         }
-        for sp_mod in sp_mods
+        for abbr in ALL_SP_MOD_ABBRS
       ]
 
     return obj

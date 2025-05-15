@@ -5,7 +5,7 @@ from typing import Dict
 S_LAYER_LEFT = "s_layer_left"
 S_LAYER_RIGHT = "s_layer_right"
 
-SP_MOD_ABBRS = ["LL", "LR"]
+ALL_SP_MOD_ABBRS = ["LL", "LR"]
 
 class BaseSettings():
   def __init__(self):
@@ -52,8 +52,8 @@ class BaseSettings():
   def get_sp_mod_abbr_to_name_mapper(self) -> Dict[str, str]:
     return {x.abbr: x.name for x in self.get_available_sp_mods()}
 
-  def get_sp_mod_name_to_sp_mod_mapper(self) -> Dict[str, SpecialModifier]:
-    return {x.name: x for x in self.get_available_sp_mods()}
+  def get_sp_mod_name_to_obj_mapper(self) -> Dict[str, SpecialModifier]:
+    return {x.abbr: x for x in self.get_available_sp_mods()}
 
   def validate(self):
     if self.description is None:

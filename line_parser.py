@@ -2,7 +2,7 @@ from typing import Callable
 from parse_result import ParseResult
 from typing import Optional, Tuple
 from util import strip_split
-from base_settings import SP_MOD_ABBRS
+from base_settings import ALL_SP_MOD_ABBRS
 
 class LineParser:
   @staticmethod
@@ -54,11 +54,11 @@ class LineParser:
     lhs_key = lhs_toks[-1]
     lhs_others = lhs_toks[:-1]
 
-    is_sp_mod_abbr = lambda x: x in SP_MOD_ABBRS or "," in x
+    is_sp_mod_abbrs = lambda x: x in ALL_SP_MOD_ABBRS or "," in x
 
     # classify modifiers into sp and normal ones
     lhs_sp_mods, lhs_mods = LineParser.partition(
-      lhs_others, is_sp_mod_abbr
+      lhs_others, is_sp_mod_abbrs
     )
 
     # parse rhs
@@ -69,7 +69,7 @@ class LineParser:
 
     # classify modifiers into sp and normal ones
     rhs_sp_mods, rhs_mods = LineParser.partition(
-      rhs_others, is_sp_mod_abbr
+      rhs_others, is_sp_mod_abbrs
     )
 
     # rhs should not have sp_mods
