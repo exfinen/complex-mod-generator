@@ -26,7 +26,7 @@ class LineParser:
 
     lhs : rhs
     lhs: (mod_key (+ mod_key)* +)* key
-    rhs: (mod_key (+ mod_key)*)* +) key
+    rhs: (mod_key (+ mod_key)*)* +) key(,tap_key)?
     mod_key: sp_mod_keys | norm_mod_key
     sp_mod_keys: sp_mod_key (, sp_mod_key)*
     """

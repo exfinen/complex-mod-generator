@@ -26,12 +26,12 @@ class BaseSettings():
       if lhs.key == S_LAYER_LEFT:
         if self.LL is not None:
           raise ValueError(f"Duplicate def for {lhs.key} at {line_no}")
-        self.LL = SpecialModifier(rhs.key, lhs.key, "LL")
+        self.LL = SpecialModifier.of(rhs.key, lhs.key, "LL")
 
       elif lhs.key == S_LAYER_RIGHT:
         if self.LR is not None:
           raise ValueError(f"Duplicate def for {lhs.key} at {line_no}")
-        self.LR = SpecialModifier(rhs.key, lhs.key, "LR")
+        self.LR = SpecialModifier.of(rhs.key, lhs.key, "LR")
 
       else:
         raise ValueError(f"Unknown special modifier key: {lhs.key} at {line_no}")

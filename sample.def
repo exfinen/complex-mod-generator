@@ -1,7 +1,7 @@
 # Settings
 description: Sample mapping
 s_layer_left: japanese_eisuu
-s_layer_right: japanese_kana
+s_layer_right: japanese_kana,return_or_enter,100
 
 # Layer 1
 left_control + h: delete_or_backspace

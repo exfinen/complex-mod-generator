@@ -1,5 +1,9 @@
-from base_settings import BaseSettings, ALL_SP_MOD_ABBRS
+from __future__ import annotations
 from parse_result import ParseResult
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+  from base_settings import BaseSettings
 
 class MappingRule():
   def __init__(self, line_no: int, lhs: ParseResult, rhs: ParseResult):
@@ -10,7 +14,7 @@ class MappingRule():
   def __str__(self) -> str:
     return f"MappingRule(line_no={self.line_no}, lhs={self.lhs}, rhs={self.rhs})"
 
-  def to_obj(self, base_settings: BaseSettings) -> object:
+  def to_obj(self, base_settings: "BaseSettings") -> object:
     obj = {
       "from": {
         "key_code": self.lhs.key,
@@ -32,6 +36,7 @@ class MappingRule():
       # get SpecialModifier objects from names
       abbr_to_sp_mod = base_settings.get_sp_mod_name_to_obj_mapper()
 
+      from base_settings import ALL_SP_MOD_ABBRS
       obj["conditions"] = [
         {
           "name": abbr_to_sp_mod[abbr].get_event_name(),

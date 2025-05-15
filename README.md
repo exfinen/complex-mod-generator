@@ -41,10 +41,12 @@ The following special modifier IDs are available:
 Each special modifier ID can optionally be mapped to a Karabiner key ID using the following format:
 
 ```
-<special_modifier_ID> : <Karabiner_key_ID>
+<special_modifier_ID> : <Karabiner_key_ID>(, <Karabiner_key_ID>, (<threshold>))
 ```
 
 You may define only the ones you use. It’s perfectly fine to omit unused special modifier IDs.
+
+The second key ID on the right-hand side is an optional tap key, and the threshold defines the duration in ms used to distinguish a short (tap) press from a long press.
 
 ⚠️  Aliases cannot be used on the left-hand side of these mappings.
 

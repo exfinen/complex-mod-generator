@@ -1,5 +1,3 @@
-from special_modifier import SpecialModifier
-
 class ParseResult:
   def __init__(
     self,
