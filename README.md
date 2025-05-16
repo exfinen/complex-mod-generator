@@ -1,5 +1,5 @@
 # karabiner-layered-mapper
-Generates a [Karabiner-Elements](https://karabiner-elements.pqrs.org/) complex modification rule JSON from a rule definition file.
+Generates a [Karabiner-Elements](https://karabiner-elements.pqrs.org/) complex modification rule JSON from a simple rule definition file with support for layers.
 
 ## Definition file
 The definition file format supports virtual layer keys and shift keys, enabling layer-based key mapping commonly used in custom keyboards.
